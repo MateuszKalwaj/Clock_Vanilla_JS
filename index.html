@@ -25,6 +25,11 @@
         const seconds = now.getSeconds();
         const secondsAngle = ((seconds/60) * 360) + 90;
         secondsHand.style.transform = `rotate(${secondsAngle}deg)`
+        if(secondsAngle === 90) {
+            secondsHand.style.transition = 'none'
+        } else {
+            secondsHand.style.transition = ''
+        }
 
         const minutes = now.getMinutes();
         const hours = now.getHours();
